@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+package-lock.json
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
