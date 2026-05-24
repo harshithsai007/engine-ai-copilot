@@ -5,6 +5,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
 export async function POST() {
   try {
+    let baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+    if (baseUrl && !baseUrl.startsWith('http')) {
+      baseUrl = `https://${baseUrl}`;
+    }
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -12,8 +17,8 @@ export async function POST() {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: 'EngineAI Co-Pilot Subscription',
-              description: 'Access to the EngineAI Co-Pilot technical career platform.',
+              name: 'EngineAI Pro Subscription',
+              description: 'Elite technical interview guidance.',
             },
             unit_amount: 4900, // $49.00
             recurring: {
@@ -24,8 +29,8 @@ export async function POST() {
         },
       ],
       mode: 'subscription',
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cancel`,
+      success_url: `${baseUrl}/success`,
+      cancel_url: `${baseUrl}/cancel`,
     });
 
     return NextResponse.json({ url: session.url });

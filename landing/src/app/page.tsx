@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       <footer className="py-12 border-t border-white/5 text-center text-zinc-500">
-        <p>© 2026 EngineAI Unicorn. Built for elite engineers.</p>
+        <p>© 2026 EngineAI Co-Pilot. Built for elite engineers.</p>
       </footer>
     </div>
   );
