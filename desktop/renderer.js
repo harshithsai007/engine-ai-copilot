@@ -4,6 +4,8 @@ const startBtn = document.getElementById('start-btn');
 const videoElement = document.getElementById('video');
 const guidanceElement = document.getElementById('guidance');
 
+let captureInterval;
+
 startBtn.onclick = async () => {
   const sources = await ipcRenderer.invoke('get-sources');
   
@@ -35,16 +37,41 @@ function handleStream(stream) {
   videoElement.srcObject = stream;
   videoElement.onloadedmetadata = (e) => videoElement.play();
 
-  // MVP: Mock periodic analysis
-  setInterval(async () => {
-    // In a real app, you would capture a frame and send it to the backend
+  // Create a canvas to capture frames
+  const canvas = document.createElement('canvas');
+  canvas.width = 1280;
+  canvas.height = 720;
+  const ctx = canvas.getContext('2d');
+
+  if (captureInterval) clearInterval(captureInterval);
+
+  captureInterval = setInterval(async () => {
     console.log("Capturing frame for analysis...");
     
-    // Simulate API call to backend
-    // const response = await fetch('http://localhost:8000/analyze', { ... });
-    // const data = await response.json();
-    // guidanceElement.innerText = data.guidance;
+    // Draw current video frame to canvas
+    ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+    
+    // Convert to Blob
+    canvas.toBlob(async (blob) => {
+      if (!blob) return;
 
-    guidanceElement.innerText = "Analyzing technical context... [Simulated AI Guidance: Focus on Big O complexity and memory tradeoffs for this approach.]";
-  }, 5000);
+      const formData = new FormData();
+      formData.append('image', blob, 'frame.jpg');
+
+      try {
+        // We will update this URL after backend deployment
+        const response = await fetch('http://localhost:8000/analyze', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const data = await response.json();
+        guidanceElement.innerText = data.guidance;
+      } catch (error) {
+        console.error("Analysis failed:", error);
+        guidanceElement.innerText = "Connection error. Retrying...";
+      }
+    }, 'image/jpeg', 0.8);
+
+  }, 10000); // Analyze every 10 seconds for MVP
 }
