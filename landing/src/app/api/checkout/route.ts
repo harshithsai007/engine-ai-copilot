@@ -12,8 +12,8 @@ export async function POST() {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: 'EngineAI Unicorn Subscription',
-              description: 'Access to the $1B Unicorn technical career platform.',
+              name: 'EngineAI Co-Pilot Subscription',
+              description: 'Access to the EngineAI Co-Pilot technical career platform.',
             },
             unit_amount: 4900, // $49.00
             recurring: {

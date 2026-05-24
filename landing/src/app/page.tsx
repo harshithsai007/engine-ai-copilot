@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent leading-tight">
-          The $1B Unicorn Platform <br />
+          The EngineAI Co-Pilot Platform <br />
           for Your Technical Career.
         </h1>
         
