@@ -31,7 +31,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https://github.com/harshithsai007/engine-ai-copilot&root-directory=landing) link.
+The easiest way to deploy your Next.js app is to use the [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https://github.com/harshithsai007/engine-ai-copilot) link.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
