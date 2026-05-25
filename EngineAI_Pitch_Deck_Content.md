@@ -25,7 +25,7 @@ This document outlines the specific content for the 5-slide "Pre-Seed" pitch dec
 *   **How it Works:** EngineAI uses GPT-4o Vision to see what the engineer sees, providing real-time decision support, trade-off analysis, and system design guidance.
 *   **Value Prop:**
     *   **Reduces Cognitive Load by 60%:** Allows engineers to focus on high-level strategy while the AI handles the "cognitive scaffolding."
-    *   **Magical Experience:** A "God-Mode" overlay that lives outside the browser, invisible to interview infrastructure.
+    *   **Magical Experience:** An undetectable overlay that lives outside the browser, invisible to interview infrastructure.
     *   **Not a "Cheating Tool":** It's a real-time guidance system for the future of work.
 
 ---

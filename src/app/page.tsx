@@ -42,24 +42,29 @@ export default function Home() {
           Master high-level concepts and architectural design, not just syntax.
         </p>
 
+        <div className="bg-white/5 border border-yellow-500/50 p-8 rounded-3xl mb-12 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 bg-yellow-500 text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-widest">
+            Founder's Choice
+          </div>
+          <h3 className="text-2xl font-bold mb-2">Elite Annual</h3>
+          <div className="text-4xl font-black mb-4">$500<span className="text-sm text-zinc-500 font-normal">/year</span></div>
+          <ul className="text-left space-y-2 text-zinc-400 text-sm mb-8">
+            <li className="flex items-center gap-2 text-white font-semibold">✓ Priority Support (24h Interview Prep)</li>
+            <li className="flex items-center gap-2">✓ Real-time Vision AI Scaffolding</li>
+            <li className="flex items-center gap-2">✓ Undetectable Stealth Layer</li>
+            <li className="flex items-center gap-2">✓ Private Discord Community</li>
+          </ul>
+          <button 
+            onClick={handleSubscribe}
+            disabled={loading}
+            className="w-full bg-white text-black font-bold py-4 px-10 rounded-full hover:bg-zinc-200 transition-all text-lg shadow-[0_0_30px_rgba(255,255,255,0.15)] disabled:opacity-50"
+          >
+            {loading ? 'Processing...' : 'Claim Elite Status'}
+          </button>
+        </div>
+
         <div className="flex flex-col items-center gap-6">
           <ScarcityCounter />
-          
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <button 
-              onClick={handleSubscribe}
-              disabled={loading}
-              className="bg-white text-black font-bold py-4 px-10 rounded-full hover:bg-zinc-200 transition-all text-lg shadow-[0_0_30px_rgba(255,255,255,0.15)] disabled:opacity-50"
-            >
-              {loading ? 'Processing...' : 'Subscribe Now'}
-            </button>
-            <a
-              href="#enterprise"
-              className="bg-transparent border border-white/20 text-white font-semibold py-4 px-10 rounded-full hover:bg-white/5 transition-all text-lg"
-            >
-              Enterprise Demo
-            </a>
-          </div>
         </div>
       </main>
 
