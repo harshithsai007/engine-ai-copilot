@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* Trigger redeploy: Sunday, May 24, 2026 */
+  /* Trigger redeploy: Monday, May 25, 2026 - 01:50 */
 };
 
 export default nextConfig;
