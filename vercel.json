@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm --prefix landing run build",
+  "outputDirectory": "landing/.next",
+  "framework": "nextjs"
+}
