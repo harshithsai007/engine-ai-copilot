@@ -1,5 +1,7 @@
 'use client';
 
+// VERCEL_DEPLOY_ID: 1779657812965
+
 import ScarcityCounter from '@/components/ScarcityCounter';
 import { useState } from 'react';
 
