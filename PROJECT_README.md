@@ -3,9 +3,10 @@
 MVP for EngineAI Co-Pilot, a desktop application for real-time technical interview guidance.
 
 ## Project Structure
+- Root: Configuration and project documentation.
+- `landing/`: Next.js landing page.
 - `backend/`: FastAPI backend with OpenAI integration.
 - `desktop/`: Electron desktop application.
-- Root: Next.js landing page (moved from `landing/`).
 
 ## Deployment Plan
 - **Backend**: Deploy to AWS App Runner or Render.

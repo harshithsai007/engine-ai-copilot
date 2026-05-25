@@ -1,0 +1,8 @@
+{
+  "name": "engine-ai-copilot-root",
+  "private": true,
+  "scripts": {
+    "build": "cd landing && next build",
+    "install": "cd landing && npm install"
+  }
+}
