@@ -17,12 +17,12 @@ export async function POST() {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: 'EngineAI Pro Subscription',
-              description: 'Elite technical interview guidance.',
+              name: 'EngineAI Elite Annual',
+              description: 'Elite technical interview guidance - Founder\'s Choice.',
             },
-            unit_amount: 4900, // $49.00
+            unit_amount: 50000, // $500.00
             recurring: {
-              interval: 'month',
+              interval: 'year',
             },
           },
           quantity: 1,

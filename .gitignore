@@ -62,3 +62,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Project specific
+*.log
+*.pid
+*.mp4
+backend/backend.log
+backend/backend.pid
+desktop/desktop.log
+desktop/desktop.pid

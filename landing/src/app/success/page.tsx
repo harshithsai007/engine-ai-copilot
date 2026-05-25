@@ -26,6 +26,13 @@ export default function SuccessPage() {
           >
             Download EngineAI Co-Pilot
           </a>
+
+          <a
+            href="https://discord.gg/engineai-elite"
+            className="bg-[#5865F2] text-white font-bold py-4 px-10 rounded-full hover:bg-[#4752C4] transition-all text-lg shadow-[0_0_30px_rgba(88,101,242,0.2)]"
+          >
+            Join the Private Discord
+          </a>
           
           <Link
             href="/"
